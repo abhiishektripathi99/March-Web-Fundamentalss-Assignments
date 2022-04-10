@@ -1,0 +1,42 @@
+body{
+    background-color:rgb(204, 223, 235);
+}
+.arrow-up {
+    width: 0;
+	height: 0;
+    top: 260px;
+    left: 450px;
+    position: relative;
+
+	border-left: 250px solid transparent;
+	border-right: 250px solid transparent;
+	border-bottom: 200px solid rgb(124, 78, 122);
+  }
+  
+  .arrow-down {
+    height: 0;
+    width: 0;
+    position: relative;
+    top: 1px;
+    left: 450px;
+
+	border-left: 250px solid transparent;
+	border-right: 250px solid transparent;
+	border-bottom: 200px solid rgb(157, 207, 109);
+  }
+  
+  .arrow-right {
+    width: 0;
+	height: 0;
+    top: -260px;
+    left: 450px;
+    position: relative;
+
+	border-left: 250px solid transparent;
+	border-right: 250px solid transparent;
+	border-bottom: 200px solid rgb(175, 19, 97);
+  }
+  
+  
+  
+  
