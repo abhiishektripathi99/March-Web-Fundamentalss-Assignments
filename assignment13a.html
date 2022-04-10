@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<script>
+var ch;
+function checkVowel()
+{
+  ch = document.getElementById("char").value;
+  if(ch)
+  {
+    temp = document.getElementById("resPara");
+    temp.style.display = "block";
+    if((ch>='a' && ch<='z') || (ch>='A' && ch<='Z'))
+    {
+      if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u')
+        document.getElementById("res").innerHTML = "a Vowel";
+      else if(ch=='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U')
+        document.getElementById("res").innerHTML = "a Vowel";
+      else
+        document.getElementById("res").innerHTML = "a Consonant";
+    }
+    else
+      document.getElementById("res").innerHTML = "neither Vowel nor Consonant";
+  }
+}
+
+function printEvenNums(){
+        
+        var start = parseInt(document.getElementById("start").value);
+        var end = parseInt(document.getElementById("end").value);
+        var evenNums = "<br>Even Numbers:<br>";
+ 
+        for(i=start; i<=end; i++){
+          
+          if(i % 2 == 0){
+            evenNums += i + "<br>";
+          }
+        }
+        
+        document.getElementById("result").innerHTML = evenNums;
+      }
+
+       function p() {
+              
+            var n, i, flag = true;
+              
+            
+            n = document.myform.n.value;
+            n = parseInt(n)
+            for(i = 2; i <= n - 1; i++)
+                if (n % i == 0) {
+                    flag = false;
+                    break;
+                }
+                  
+               
+            if (flag == true)
+                alert(n + " is prime");
+            else
+                alert(n + " is not prime");
+        }
+</script>
+</head>
+<body>
+  <center>
+<h1>Check whether the character Vowel or Consonant</h1>
+<p>Enter the Character: <input id="char"><button onclick="checkVowel()">Check</button></p>
+<p id="resPara" style="display:none;">It is <span id="res"></span></p>
+</center>
+<hr>
+<center>
+ <h3>Print Even Numbers within a Range</h3>
+    Start: <input type="number" min="0" id="start" value="1" />
+    End: <input type="number" id="end" min="1" value="20" />
+    <input type="button" onclick="printEvenNums()" value="Print Even Numbers" />
+    <div id="result"></div>
+    </center>
+    <hr>
+
+
+     <center>
+        
+          
+        <h4>check number is prime or not</h4>
+          
+        <hr color="Green">
+          
+        <form name="myform">
+            Enter the number:
+            <input type="text" name=n value="">
+              
+            <br><br>
+              
+            <input type="button" value="Check" onClick="p()">
+            <br>
+        </form>
+    </center>
+
+</body>
+</html>
